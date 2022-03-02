@@ -1,13 +1,68 @@
-<html>
-  <head>
-    <title>JavaScript</title>
-    <script src="node_modules/traceur/bin/traceur.js"></script>
-    <script src="node_modules/es6-module-loader/dist/es6-module-loader-dev.js"></script>
-  </head>
-  <body>
-    this is my page
-      <script>
-          System.import('src/app.js');
-      </script> 
-  </body>
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Social Story</title>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://unpkg.com/swiper/swiper-bundle.min.css'>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="container">
+  <div class="swiper mySwiper" id="stories-cover">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" onclick="openStory(this)">
+        <div class="user-avatar"><img src="https://abdullahturkmen.com/abdullah-turkmen-avatar.jpg" alt=""></div><span>Abdullah Lipa</span>
+      </div>
+      <div class="swiper-slide" onclick="openStory(this)">
+        <div class="user-avatar"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Pierre-Person.jpg" alt=""></div><span>Abdullah Doe</span>
+      </div>
+      <div class="swiper-slide" onclick="openStory(this)">
+        <div class="user-avatar"><img src="https://img.freepik.com/free-photo/handsome-young-businessman-shirt-eyeglasses_85574-6228.jpg?size=626&ext=jpg" alt=""></div><span>Abdullah Türkmen</span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="stories hide" id="stories">
+    <div class="swiper myStorySwiper">
+      <div class="story-details" id="story-details"></div>
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <ul class="story-list">
+            <li class="story-list-item"><img src="https://picsum.photos/id/202/450/800" alt=""></li>
+            <li class="story-list-item"><img src="https://picsum.photos/id/239/450/800" alt=""></li>
+            <li class="story-list-item"><img src="https://picsum.photos/id/243/450/800" alt=""></li>
+          </ul>
+        </div>
+        <div class="swiper-slide">
+          <ul class="story-list">
+            <li class="story-list-item"><img src="https://picsum.photos/id/337/450/800" alt=""></li>
+            <li class="story-list-item"><img src="https://picsum.photos/id/339/450/800" alt=""></li>
+            <li class="story-list-item"><img src="https://picsum.photos/id/243/450/800" alt=""></li>
+          </ul>
+        </div>
+        <div class="swiper-slide">
+          <ul class="story-list">
+            <li class="story-list-item"><img src="https://picsum.photos/id/437/450/800" alt=""></li>
+            <li class="story-list-item"><img src="https://picsum.photos/id/439/450/800" alt=""></li>
+            <li class="story-list-item"><img src="https://picsum.photos/id/445/450/800" alt=""></li>
+            <li class="story-list-item"><img src="https://picsum.photos/id/439/450/800" alt=""></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+ 
+<script src='https://unpkg.com/swiper/swiper-bundle.min.js'></script>
+<script src="app.js"></script>
+
+</body>
 </html>
